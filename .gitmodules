@@ -1,0 +1,3 @@
+[submodule "Frameworks/QWAPI"]
+	path = Frameworks/QWAPI
+	url = /Users/hakonbogen/dev/QuizWorldAPI
