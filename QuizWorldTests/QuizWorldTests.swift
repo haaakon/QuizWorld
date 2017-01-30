@@ -8,8 +8,17 @@
 
 import XCTest
 @testable import QuizWorld
+@testable import QuizWorldAPI
+@testable import ReactiveExtensions_TestHelpers
+import Prelude
+import ReactiveSwift
+import Result
 
 class QuizWorldTests: XCTestCase {
+    
+    fileprivate let vm: QuestionViewModelType = QuestionViewModel()
+    
+    fileprivate let showQuestionText = TestObserver<String, NoError>()
     
     override func setUp() {
         super.setUp()
