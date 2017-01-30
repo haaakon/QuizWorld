@@ -22,9 +22,7 @@ public protocol QuestionViewModelInputs {
     /// Question that should be shown
     func configureWith(question: Question)
     
-    
 }
-
 
 public protocol QuestionViewModelOutputs {
     
@@ -40,14 +38,11 @@ public protocol QuestionViewModelType {
     
 }
 
-
-
 public final class QuestionViewModel: QuestionViewModelType, QuestionViewModelInputs, QuestionViewModelOutputs {
     
     public let questionText: Signal<String, NoError>
     
     /// Question that should be shown
-    
     fileprivate let question = MutableProperty<Question?>(nil)
     
     public func configureWith(question: Question) {
@@ -55,11 +50,6 @@ public final class QuestionViewModel: QuestionViewModelType, QuestionViewModelIn
         self.question.value = question
         
     }
-    
-    //    / Question that should be shown
-    
-    //    public let question: Signal<Question, NoError>
-    
     
     public init() {
         
@@ -79,22 +69,7 @@ public final class QuestionViewModel: QuestionViewModelType, QuestionViewModelIn
                 
         }
         
-        //        self.viewModel.outputs.backedProjects
-        //            .observeForUI()
-        //            .observeValues { [weak self] ps in
-        //                self?.dataSource.load(projects: ps)
-        //                self?.collectionView?.reloadData()
-        //        }
-        //
-        //        self.question = viewDidLoadProperty.signal.map { stuff in
-        //            
-        //            
-        //            
-        //        }
-        
     }
-    
-    
     
     public func answered(alternative: Alternative) {
         

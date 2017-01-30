@@ -7,22 +7,26 @@
 //
 
 import XCTest
+
 @testable import QuizWorld
 @testable import QuizWorldAPI
-@testable import ReactiveExtensions_TestHelpers
+
 import Prelude
 import ReactiveSwift
+import ReactiveExtensions
 import Result
 
 class QuizWorldTests: XCTestCase {
     
-    fileprivate let vm: QuestionViewModelType = QuestionViewModel()
+    //    fileprivate let vm: QuestionViewModelType = QuestionViewModel()
     
-    fileprivate let showQuestionText = TestObserver<String, NoError>()
+    //    fileprivate let showQuestionText = TestObserver<String, NoError>()
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        let a = QuestionViewModel()
+        
     }
     
     override func tearDown() {

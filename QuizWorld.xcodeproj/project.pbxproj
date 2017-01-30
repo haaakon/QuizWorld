@@ -17,7 +17,7 @@
 		EC3096E31E3E39D00071EFD4 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3096E21E3E39D00071EFD4 /* Answer.swift */; };
 		EC3096E51E3E3ABE0071EFD4 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3096E41E3E3ABE0071EFD4 /* Enviroment.swift */; };
 		EC3096E71E3E40D70071EFD4 /* AppEnviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3096E61E3E40D70071EFD4 /* AppEnviroment.swift */; };
-		EC3096F51E3F883C0071EFD4 /* ReactiveExtensions_TestHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3096F41E3F883C0071EFD4 /* ReactiveExtensions_TestHelpers.framework */; };
+		EC3096FD1E3F8EA50071EFD4 /* ReactiveExtensions_TestHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3096FC1E3F8EA50071EFD4 /* ReactiveExtensions_TestHelpers.framework */; };
 		ECD394861E3E2F39007D6A37 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD394851E3E2F39007D6A37 /* QuestionViewModel.swift */; };
 		ECD394871E3E2FC0007D6A37 /* QuizWorldAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD394721E3E2CCA007D6A37 /* QuizWorldAPI.framework */; };
 /* End PBXBuildFile section */
@@ -29,6 +29,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = EC1A67011E3CDBD6009E5934;
 			remoteInfo = QuizWorld;
+		};
+		EC3096F61E3F8A570071EFD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECD394651E3E2CC9007D6A37 /* QuizWorldAPI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EC1A672D1E3CE2C0009E5934;
+			remoteInfo = QuizWorldAPI;
 		};
 		ECD394711E3E2CCA007D6A37 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -63,6 +70,8 @@
 		EC3096E61E3E40D70071EFD4 /* AppEnviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnviroment.swift; sourceTree = "<group>"; };
 		EC3096EB1E3E4F7D0071EFD4 /* ReactiveExtensions_TestHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveExtensions_TestHelpers.framework; path = "Frameworks/QWAPI/Frameworks/Kickstarter-ReactiveExtensions/build/Debug-iphoneos/ReactiveExtensions_TestHelpers.framework"; sourceTree = "<group>"; };
 		EC3096F41E3F883C0071EFD4 /* ReactiveExtensions_TestHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveExtensions_TestHelpers.framework; path = "Frameworks/QWAPI/Frameworks/Kickstarter-ReactiveExtensions/build/Debug-appletvos/ReactiveExtensions_TestHelpers.framework"; sourceTree = "<group>"; };
+		EC3096F81E3F8AC90071EFD4 /* ReactiveExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveExtensions.framework; path = "Frameworks/QWAPI/Frameworks/Kickstarter-ReactiveExtensions/build/Debug-appletvos/ReactiveExtensions.framework"; sourceTree = "<group>"; };
+		EC3096FC1E3F8EA50071EFD4 /* ReactiveExtensions_TestHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveExtensions_TestHelpers.framework; path = "Frameworks/QWAPI/Frameworks/Kickstarter-ReactiveExtensions/build/Debug-iphoneos/ReactiveExtensions_TestHelpers.framework"; sourceTree = "<group>"; };
 		ECD394651E3E2CC9007D6A37 /* QuizWorldAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QuizWorldAPI.xcodeproj; path = Frameworks/QWAPI/QuizWorldAPI.xcodeproj; sourceTree = "<group>"; };
 		ECD394851E3E2F39007D6A37 /* QuestionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC3096F51E3F883C0071EFD4 /* ReactiveExtensions_TestHelpers.framework in Frameworks */,
+				EC3096FD1E3F8EA50071EFD4 /* ReactiveExtensions_TestHelpers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +146,8 @@
 		EC3096EA1E3E4F7C0071EFD4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC3096FC1E3F8EA50071EFD4 /* ReactiveExtensions_TestHelpers.framework */,
+				EC3096F81E3F8AC90071EFD4 /* ReactiveExtensions.framework */,
 				EC3096F41E3F883C0071EFD4 /* ReactiveExtensions_TestHelpers.framework */,
 				EC3096EB1E3E4F7D0071EFD4 /* ReactiveExtensions_TestHelpers.framework */,
 			);
@@ -166,6 +177,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				EC3096F71E3F8A570071EFD4 /* PBXTargetDependency */,
 			);
 			name = QuizWorld;
 			productName = QuizWorld;
@@ -304,6 +316,11 @@
 			isa = PBXTargetDependency;
 			target = EC1A67011E3CDBD6009E5934 /* QuizWorld */;
 			targetProxy = EC1A67171E3CDBD6009E5934 /* PBXContainerItemProxy */;
+		};
+		EC3096F71E3F8A570071EFD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QuizWorldAPI;
+			targetProxy = EC3096F61E3F8A570071EFD4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -449,7 +466,6 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 5PKTA338CL;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = QuizWorldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = a.QuizWorldTests;
@@ -463,7 +479,6 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 5PKTA338CL;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = QuizWorldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = a.QuizWorldTests;
